@@ -1,0 +1,6 @@
+name: image-indexer-core
+title: Image Indexer Core
+version: master
+start_page: ROOT:index.adoc
+nav:
+- modules/ROOT/nav.adoc

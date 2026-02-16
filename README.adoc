@@ -1,0 +1,15 @@
+= Image Indexer Core
+
+== Summary
+Core library for Image Search Indexing logic, including ONNX runtime bindings for CLIP-based image embedding and search.
+
+== Architecture
+- **Inference**: Uses `bindbc-onnxruntime` to run quantized CLIP models.
+- **Image Processing**: Validates and preprocesses images using `imageformats`.
+- **Indexing**: Implements simple vector similarity search (Cosine metrics).
+
+== Usage
+See `source/app.d` for example.
+
+== Requirements
+- ONNX Runtime installed and available in library path.

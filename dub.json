@@ -1,0 +1,15 @@
+{
+	"name": "image-indexer-core",
+	"authors": [
+		"Antigravity"
+	],
+	"description": "Core logic for local image search indexer using D-lang.",
+	"copyright": "Copyright © 2026, Antigravity",
+	"license": "MIT",
+	"dependencies": {
+		"bindbc-onnxruntime": "~>1.2.0",
+		"imageformats": "~>7.1.0",
+		"mir-algorithm": "~>3.20.4"
+	},
+	"targetType": "library"
+}

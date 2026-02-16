@@ -1,0 +1,3 @@
+= Image Indexer Core
+
+Welcome to the documentation for Image Indexer Core.
