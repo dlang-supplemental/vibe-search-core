@@ -4,12 +4,15 @@
 Core library for Image Search Indexing logic, including ONNX runtime bindings for CLIP-based image embedding and search.
 
 == Architecture
-- **Inference**: Uses `bindbc-onnxruntime` to run quantized CLIP models.
+- **Inference**: Uses `dgml` (Pure D) for CLIP model inference.
 - **Image Processing**: Validates and preprocesses images using `imageformats`.
-- **Indexing**: Implements simple vector similarity search (Cosine metrics).
+- **Indexing**: Uses `d-vector-search` for storage and retrieval.
+
 
 == Usage
 See `source/app.d` for example.
 
 == Requirements
-- ONNX Runtime installed and available in library path.
+- **DGML**: Pure D tensor library (see `../dgml`).
+- **D-Vector-Search**: Pure D vector store (see `../d-vector-search`).
+

@@ -5,15 +5,15 @@ This library aims to port the core logic of CLIP-based image search to native D.
 
 === Current Status
 - [x] Initial structure.
-- [ ] ONNX Runtime bindings setup.
-- [ ] Image Preprocessing (Resize, Normalize, CHW conversion).
-- [ ] Tokenizer (CLIP tokenizer implementation in D or binding).
-- [ ] Vector Store (Simple flat index).
+- [ ] **Dependency**: Integrate `dgml` for inference.
+- [ ] **Dependency**: Integrate `d-vector-search` for storage.
+- [ ] Image Preprocessing (Resize, Normalize, CHW conversion) using `imageformats`.
+- [ ] Tokenizer (CLIP tokenizer implementation in Pure D).
 
-=== Future Reimplementation Goals
-- **Tokenizer**: Instead of using Python bindings or C++, implement Byte-Pair Encoding (BPE) tokenizer in pure D.
-- **Image Operations**: Optimize resize/crop operations using `mir-algorithm` or `intel-intrinsics`.
-- **Inference**: Continue using ONNX Runtime (industry standard), but wrap it in a clean, high-level D API.
+=== Integration Goals
+- **Inference**: Use `dgml` to load and run Quantized CLIP models (GGUF).
+- **Storage**: Use `d-vector-search` to save embeddings to disk.
+- **Orchestration**: Manage threading to keep UI responsive while keeping `dgml` fed.
 
 === Token Usage Control
 - Large implementations (like full BPE tokenizer code or complex matrix math libraries) should be broken down into smaller commits or referenced via stable external libraries where possible to save context window.
