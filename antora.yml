@@ -1,6 +1,6 @@
-name: image-indexer-core
-title: Image Indexer Core
+name: vibe-search-core
+title: Vibe Search Core
 version: master
 start_page: ROOT:index.adoc
 nav:
-- modules/ROOT/nav.adoc
+  - modules/ROOT/nav.adoc
