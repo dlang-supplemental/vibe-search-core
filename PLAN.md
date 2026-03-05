@@ -8,14 +8,14 @@ This library aims to port the core logic of CLIP-based image search to native D.
 
 - [x] Initial structure.
 - [ ] **Dependency**: Integrate `densor` for inference.
-- [ ] **Dependency**: Integrate `d-vector-search` for storage.
+- [ ] **Dependency**: Integrate `vector-store-dlang` for storage.
 - [ ] Image Preprocessing (Resize, Normalize, CHW conversion) using `imageformats`.
 - [ ] Tokenizer (CLIP tokenizer implementation in Pure D).
 
 ### Integration Goals
 
 - **Inference**: Use `densor` to load and run Quantized CLIP models (GGUF).
-- **Storage**: Use `d-vector-search` to save embeddings to disk.
+- **Storage**: Use `vector-store-dlang` to save embeddings to disk.
 - [ ] **Orchestration**: Manage threading to keep UI responsive while keeping `densor` fed.
 
 ### Token Usage Control

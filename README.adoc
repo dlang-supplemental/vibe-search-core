@@ -21,16 +21,16 @@ This project is the orchestrator in a multi-layered D-lang AI stack:
 [mermaid]
 ....
 graph TD
-    UI[image-indexer-ui] --> CORE[image-indexer-core]
+    UI[vibe-search-desktop] --> CORE[vibe-search-core]
     CORE --> DENSOR[Densor]
-    CORE --> VS[vector-search-dlang]
+    CORE --> VS[vector-store-dlang]
     DENSOR -.-> |Pure D Inference| CLIP[CLIP Model / GGUF]
     VS -.-> |Storage| DB[(Vector Index)]
 ....
 
 *   **Densor**: The high-performance tensor engine (Pure D port of GGML).
-*   **Vector-Search-Dlang**: A specialized database for fast vector similarity lookups.
-*   **Image-Indexer-Core**: This library—handles image loading, model orchestration, and indexing logic.
+*   **Vector-Store-Dlang**: A specialized database for fast vector similarity lookups.
+*   **Vibe-Search-Core**: This library—handles image loading, model orchestration, and indexing logic.
 
 == 🚀 Tutorial: Quick Start
 
@@ -40,7 +40,7 @@ To integrate semantic search into your D project:
 +
 [source,bash]
 ----
-dub add image-indexer-core
+dub add vibe-search-core
 ----
 
 2.  Download a CLIP GGUF model (e.g., from HuggingFace).
@@ -48,7 +48,7 @@ dub add image-indexer-core
 +
 [source,d]
 ----
-import image_indexer_core;
+import vibe_search.core.indexer;
 auto indexer = new ImageIndexer("./models/clip-v1.gguf");
 indexer.indexDirectory("/path/to/my/photos");
 ----
@@ -68,7 +68,7 @@ foreach(res; results) {
 == 📖 Reference: Technical Specs
 
 *   **Inference Engine**: `densor`
-*   **Vector Storage**: `vector-search-dlang`
+*   **Vector Storage**: `vector-store-dlang`
 *   **Supported Formats**: JPEG, PNG, TGA, BMP (via `imageformats`).
 *   **Model Compatibility**: CLIP GGUF (v1, v2, v3).
 

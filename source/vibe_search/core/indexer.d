@@ -1,4 +1,4 @@
-module indexer;
+module vibe_search.core.indexer;
 
 import std.stdio;
 import std.file;
