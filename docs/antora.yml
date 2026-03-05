@@ -1,6 +1,6 @@
 name: vibe-search-core
 title: Vibe Search Core
-version: master
+version: main
 start_page: ROOT:index.adoc
 nav:
   - modules/ROOT/nav.adoc
