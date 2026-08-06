@@ -1,18 +1,40 @@
+ifndef::env-github[:icons: font]
+:toc: preamble
+:toclevels: 2
+:sectanchors:
+
+ifndef::env-github[]
+image:https://img.shields.io/github/contributors/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Contributors,link=https://github.com/dlang-supplemental/vibe-search-core/graphs/contributors]
+image:https://img.shields.io/github/forks/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Forks,link=https://github.com/dlang-supplemental/vibe-search-core/network/members]
+image:https://img.shields.io/github/stars/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Stars,link=https://github.com/dlang-supplemental/vibe-search-core/stargazers]
+image:https://img.shields.io/github/issues/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Issues,link=https://github.com/dlang-supplemental/vibe-search-core/issues]
+endif::[]
+
+ifdef::env-github[]
+image:https://img.shields.io/github/contributors/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Contributors]
+image:https://img.shields.io/github/forks/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Forks]
+image:https://img.shields.io/github/stars/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Stars]
+image:https://img.shields.io/github/issues/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Issues]
+endif::[]
+
 = Semantic Image Search (Core)
-:toc: macro
-:toc-title: Table of Contents
+
+Vibe Search core. CLIP and search backend in D.
+
+link:https://dlang-supplemental.github.io/docs[Explore the docs] ·
+link:https://github.com/dlang-supplemental/vibe-search-core/issues[Report Bug]
+
+Install: `dub add vibe-search-core`
 
 A pure D-lang library for local, AI-powered semantic image search. This library leverages CLIP (Contrastive Language-Image Pre-training) models to enable searching through image collections using natural language descriptions, all running locally without cloud dependencies.
 
-toc::[]
-
-== 💡 Explanation: How it works
+== About The Project
 
 Traditional image search relies on filenames or metadata tags. This project uses **Semantic Embedding**:
 
-1.  **Vision Encoder**: Pictures are converted into a "vector" (a list of numbers) that represents their visual meaning.
-2.  **Text Encoder**: Your search query ("a dog playing in the snow") is converted into a vector in the same mathematical space.
-3.  **Similarity Search**: We find the images whose vectors are closest to the query vector.
+1. **Vision Encoder**: Pictures are converted into a "vector" (a list of numbers) that represents their visual meaning.
+2. **Text Encoder**: Your search query ("a dog playing in the snow") is converted into a vector in the same mathematical space.
+3. **Similarity Search**: We find the images whose vectors are closest to the query vector.
 
 === The Stack
 
@@ -28,24 +50,23 @@ graph TD
     VS -.-> |Storage| DB[(Vector Index)]
 ....
 
-*   **Densor**: The high-performance tensor engine (Pure D port of GGML).
-*   **Vector-Store-Dlang**: A specialized database for fast vector similarity lookups.
-*   **Vibe-Search-Core**: This library—handles image loading, model orchestration, and indexing logic.
+* **Densor**: The high-performance tensor engine (Pure D port of GGML).
+* **Vector-Store-Dlang**: A specialized database for fast vector similarity lookups.
+* **Vibe-Search-Core**: This library—handles image loading, model orchestration, and indexing logic.
 
-== 🚀 Tutorial: Quick Start
+== Installation
 
-To integrate semantic search into your D project:
-
-1.  Add the dependency:
-+
 [source,bash]
 ----
 dub add vibe-search-core
 ----
 
-2.  Download a CLIP GGUF model (e.g., from HuggingFace).
-3.  Initialize the indexer:
-+
+Download a CLIP GGUF model (e.g., from HuggingFace).
+
+== Usage
+
+Initialize the indexer:
+
 [source,d]
 ----
 import vibe_search.core.indexer;
@@ -53,9 +74,7 @@ auto indexer = new ImageIndexer("./models/clip-v1.gguf");
 indexer.indexDirectory("/path/to/my/photos");
 ----
 
-== 🛠️ How-to: Customizing Search
-
-To perform a search after indexing:
+Perform a search after indexing:
 
 [source,d]
 ----
@@ -65,13 +84,20 @@ foreach(res; results) {
 }
 ----
 
-== 📖 Reference: Technical Specs
+=== Technical Specs
 
-*   **Inference Engine**: `densor`
-*   **Vector Storage**: `vector-store-dlang`
-*   **Supported Formats**: JPEG, PNG, TGA, BMP (via `imageformats`).
-*   **Model Compatibility**: CLIP GGUF (v1, v2, v3).
+* **Inference Engine**: `densor`
+* **Vector Storage**: `vector-store-dlang`
+* **Supported Formats**: JPEG, PNG, TGA, BMP (via `imageformats`).
+* **Model Compatibility**: CLIP GGUF (v1, v2, v3).
 
-== ⚖️ License
+== License
+
 MIT
 
+== Contact
+
+DLang Supplemental — dlang@devcentr.org
+
+* Project: https://github.com/dlang-supplemental/vibe-search-core
+* Site: https://dlang-supplemental.github.io
