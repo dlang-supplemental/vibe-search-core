@@ -3,7 +3,25 @@ ifndef::env-github[:icons: font]
 :toclevels: 2
 :sectanchors:
 
-[[readme-top]]
+ifdef::env-github[]
+++++
+<a id="readme-top"></a>
+<div align="center">
+<a href="https://github.com/dlang-supplemental/vibe-search-core/graphs/contributors"><img src="https://img.shields.io/github/contributors/dlang-supplemental/vibe-search-core.svg?style=for-the-badge" alt="Contributors"></a>
+<a href="https://github.com/dlang-supplemental/vibe-search-core/network/members"><img src="https://img.shields.io/github/forks/dlang-supplemental/vibe-search-core.svg?style=for-the-badge" alt="Forks"></a>
+<a href="https://github.com/dlang-supplemental/vibe-search-core/stargazers"><img src="https://img.shields.io/github/stars/dlang-supplemental/vibe-search-core.svg?style=for-the-badge" alt="Stars"></a>
+<a href="https://github.com/dlang-supplemental/vibe-search-core/issues"><img src="https://img.shields.io/github/issues/dlang-supplemental/vibe-search-core.svg?style=for-the-badge" alt="Issues"></a>
+<br />
+<h3 align="center">Semantic Image Search (Core)</h3>
+<p align="center">
+Vibe Search core. CLIP and search backend in D.<br />
+<a href="https://dlang-supplemental.github.io/docs"><strong>Explore the docs</strong></a><br /><br /><a href="https://github.com/dlang-supplemental/vibe-search-core/issues">Report Bug</a>
+</p>
+</div>
+++++
+endif::[]
+
+ifndef::env-github[]
 image:https://img.shields.io/github/contributors/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Contributors,link=https://github.com/dlang-supplemental/vibe-search-core/graphs/contributors]
 image:https://img.shields.io/github/forks/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Forks,link=https://github.com/dlang-supplemental/vibe-search-core/network/members]
 image:https://img.shields.io/github/stars/dlang-supplemental/vibe-search-core.svg?style=for-the-badge[Stars,link=https://github.com/dlang-supplemental/vibe-search-core/stargazers]
@@ -15,6 +33,7 @@ Vibe Search core. CLIP and search backend in D.
 
 link:https://dlang-supplemental.github.io/docs[Explore the docs] ·
 link:https://github.com/dlang-supplemental/vibe-search-core/issues[Report Bug]
+endif::[]
 
 Install: `dub add vibe-search-core`
 
@@ -46,7 +65,9 @@ graph TD
 * **Vector-Store-Dlang**: A specialized database for fast vector similarity lookups.
 * **Vibe-Search-Core**: This library—handles image loading, model orchestration, and indexing logic.
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Installation
 
@@ -57,7 +78,9 @@ dub add vibe-search-core
 
 Download a CLIP GGUF model (e.g., from HuggingFace).
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Usage
 
@@ -87,13 +110,17 @@ foreach(res; results) {
 * **Supported Formats**: JPEG, PNG, TGA, BMP (via `imageformats`).
 * **Model Compatibility**: CLIP GGUF (v1, v2, v3).
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == License
 
 MIT
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
 
 == Contact
 
@@ -102,4 +129,6 @@ DLang Supplemental — dlang@devcentr.org
 * Project: https://github.com/dlang-supplemental/vibe-search-core
 * Site: https://dlang-supplemental.github.io
 
-link:#readme-top[back to top]
+++++
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+++++
