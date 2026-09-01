@@ -3,6 +3,7 @@ module vibe_search.core.indexer;
 import std.stdio;
 import std.file;
 import std.path;
+import std.algorithm : endsWith;
 import imageformats;
 import mir.ndslice;
 
@@ -12,7 +13,7 @@ import mir.ndslice;
 /**
  * Image Indexer Core Logic
  */
-class ImageIndexer {
+@safe class ImageIndexer {
     private string modelPath;
 
     this(string modelPath) {
@@ -25,7 +26,7 @@ class ImageIndexer {
      * Index a directory of images.
      * Returns a list of indexed image paths.
      */
-    string[] indexDirectory(string dirPath) {
+    string[] indexDirectory(string dirPath) @trusted {
         if (!exists(dirPath) || !isDir(dirPath)) {
             writeln("Directory not found: ", dirPath);
             return [];

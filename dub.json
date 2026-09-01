@@ -8,7 +8,7 @@
 	"license": "MIT",
 	"dependencies": {
 		"bindbc-onnxruntime": "~>1.2.0",
-		"imageformats": "~>7.1.0",
+		"imageformats": "~>7.0.2",
 		"mir-algorithm": "~>3.20.4"
 	},
 	"targetType": "library"
