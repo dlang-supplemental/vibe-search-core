@@ -1,0 +1,21 @@
+{
+  "name": "@dlang-supplemental/vibe-search-core-docs",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@10.28.1",
+  "scripts": {
+    "diagrams": "node scripts/build-diagram.mjs",
+    "diagrams:check": "node scripts/build-diagram.mjs --check"
+  },
+  "devDependencies": {
+    "@dev-centr/mermaid-svg-css-vars": "0.1.2",
+    "@dev-centr/themed-svg": "0.1.1",
+    "@mermaid-js/mermaid-cli": "11.9.0",
+    "@xmldom/xmldom": "0.9.12"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "puppeteer"
+    ]
+  }
+}

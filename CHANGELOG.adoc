@@ -1,5 +1,10 @@
 = Changelog
 
+== 2026-09-08 — themed architecture diagram
+
+* Extract the README architecture Mermaid block into an editable source with explicit Themed SVG v1 manifest.
+* Publish deterministic standalone-adaptive and host SVG artifacts with generation and freshness checks.
+
 == 2026-09-01 — build fixes
 
 * Pin `imageformats` to registry version `~>7.0.2`.

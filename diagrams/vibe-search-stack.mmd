@@ -1,0 +1,7 @@
+%% The library orchestrates inference and vector storage for the desktop client.
+flowchart TD
+  UI["vibe-search-desktop"] --> CORE["vibe-search-core"]
+  CORE --> DENSOR["Densor"]
+  CORE --> VS["vector-store-dlang"]
+  DENSOR -. "Pure D inference" .-> CLIP["CLIP model / GGUF"]
+  VS -. "Storage" .-> DB[("Vector index")]

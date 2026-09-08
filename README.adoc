@@ -51,15 +51,8 @@ Traditional image search relies on filenames or metadata tags. This project uses
 
 This project is the orchestrator in a multi-layered D-lang AI stack:
 
-[mermaid]
-....
-graph TD
-    UI[vibe-search-desktop] --> CORE[vibe-search-core]
-    CORE --> DENSOR[Densor]
-    CORE --> VS[vector-store-dlang]
-    DENSOR -.-> |Pure D Inference| CLIP[CLIP Model / GGUF]
-    VS -.-> |Storage| DB[(Vector Index)]
-....
+[.themed-svg]
+image::diagrams/vibe-search-stack.svg[Vibe Search architecture from desktop client through core orchestration to Densor inference and vector storage,width=100%,alt="Vibe Search desktop uses vibe-search-core, which orchestrates Densor and vector-store-dlang"]
 
 * **Densor**: The high-performance tensor engine (Pure D port of GGML).
 * **Vector-Store-Dlang**: A specialized database for fast vector similarity lookups.

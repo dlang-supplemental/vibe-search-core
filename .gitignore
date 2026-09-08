@@ -1,4 +1,5 @@
 .dub/
+node_modules/
 docs/_site/
 .idea/
 .vscode/
@@ -10,5 +11,7 @@ test/
 *.pdb
 *.json
 !dub.json
+!package.json
+!diagrams/*.json
 *.jsonc
 !dprint.jsonc

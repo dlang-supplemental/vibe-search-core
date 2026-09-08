@@ -1,0 +1,18 @@
+{
+  "theme": "base",
+  "htmlLabels": false,
+  "deterministicIds": true,
+  "deterministicIDSeed": "vibe-search-core-stack-themed-svg-v1",
+  "themeVariables": {
+    "primaryColor": "#eef4ff",
+    "primaryTextColor": "#18202b",
+    "primaryBorderColor": "#385f8a",
+    "lineColor": "#364152",
+    "textColor": "#18202b",
+    "fontFamily": "Segoe UI, system-ui, sans-serif"
+  },
+  "flowchart": {
+    "curve": "basis",
+    "useMaxWidth": true
+  }
+}
