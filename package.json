@@ -8,9 +8,10 @@
     "diagrams:check": "node scripts/build-diagram.mjs --check"
   },
   "devDependencies": {
+    "puppeteer": "^25.0.0",
     "@dev-centr/mermaid-svg-css-vars": "0.1.2",
     "@dev-centr/themed-svg": "0.1.1",
-    "@mermaid-js/mermaid-cli": "11.9.0",
+    "@mermaid-js/mermaid-cli": "12.0.0",
     "@xmldom/xmldom": "0.9.12"
   },
   "pnpm": {
